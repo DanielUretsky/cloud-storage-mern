@@ -1,0 +1,135 @@
+.filelist {
+    margin: 15px 0px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    overflow-x: auto;
+    
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 4fr repeat(4, 1fr);
+        font-weight: 700;
+        
+        
+    }
+    &__name {
+        grid-column-start: 2;
+        
+        
+    }
+
+    &__date {
+        grid-column-start: 5;
+        justify-self: center;
+    }
+
+    &__size {
+        grid-column-start: 6;
+        justify-self: center;
+        
+    }
+
+    &__sort-image {
+        width: 15px;
+        height: 15px;
+        justify-self: center;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &:hover {
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.705));
+        }
+    }
+
+    
+}
+
+
+.file-enter-active {
+    animation: file-enter 500ms forwards;
+}
+
+@keyframes file-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loader-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(60vh);
+
+    .lds-facebook {
+        display: inline-block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+    }
+
+    .lds-facebook div {
+        display: inline-block;
+        position: absolute;
+        left: 4px;
+        width: 8px;
+        background: #4673f0;
+        animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+
+    .lds-facebook div:nth-child(1) {
+        left: 4px;
+        animation-delay: -0.24s;
+    }
+
+    .lds-facebook div:nth-child(2) {
+        left: 16px;
+        animation-delay: -0.12s;
+    }
+
+    .lds-facebook div:nth-child(3) {
+        left: 28px;
+        animation-delay: 0;
+    }
+
+    @keyframes lds-facebook {
+        0% {
+            top: 8px;
+            height: 32px;
+        }
+
+        50%,
+        100% {
+            top: 24px;
+            height: 16px;
+        }
+    }
+}
+
+.no-files-block {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    h1 {
+        color: rgb(172, 174, 175);
+    }
+    img {
+        
+        width: 100px;
+        height: 100px;
+    }
+}
+

@@ -1,0 +1,88 @@
+.file {
+    padding: 6px 0px;
+    display: grid;
+    grid-template-columns: 1fr 4fr repeat(4, 1fr);
+    align-items: center;
+
+    border-bottom: 2px solid rgb(223, 220, 220);
+
+    &__img,
+    &__date,
+    &__size,
+    &__name {
+        font-size: 15px;
+
+        transition: transform .2s ease-in-out;
+    }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+        justify-self: center;
+        cursor: pointer;
+
+        &:hover {
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+
+        }
+    }
+
+    &__date {
+        grid-column-start: 5;
+        justify-self: center;
+    }
+
+    &__size {
+        grid-column-start: 6;
+        justify-self: center;
+
+    }
+
+
+    &:hover {
+
+        .file__img,
+        .file__date,
+        .file__size,
+        .file__name {
+            transform: scale(1.1);
+        }
+    }
+
+    &__icon-controllers {
+        display: none;
+        cursor: pointer;
+
+        &:hover {
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.438));
+        }
+    }
+
+    &:hover &__date {
+        grid-column-start: 3;
+    }
+
+    &:hover &__size {
+        grid-column-start: 4;
+    }
+
+    &:hover &__download {
+        grid-column-start: 5;
+        display: block;
+        width: 25px;
+        height: 25px;
+        justify-self: center;
+        
+
+    }
+    &:hover &__delete {
+        grid-column-start: 6;
+        display: block;
+        width: 25px;
+        height: 25px;
+        justify-self: center;
+        
+        
+    }
+}
+

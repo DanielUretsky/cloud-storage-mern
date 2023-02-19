@@ -1,0 +1,1 @@
+export const API_URL = 'https://guarded-cliffs-41688.herokuapp.com/';

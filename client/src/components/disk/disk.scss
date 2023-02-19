@@ -1,0 +1,223 @@
+.disk {
+    width: 60%;
+    height: calc(100vh - 18vh);
+    background: white;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+   
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .disk__navbar {
+        width: 100%;
+        height: 80px;
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        top: 0;
+        background: rgb(248, 246, 248);
+
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 5px solid rgb(240, 240, 240);
+
+        .navbar-items {
+            width: 33.333%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            margin-left: 20px;
+
+            &__back,
+            &__upload-file {
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                user-select: none;
+
+                transition: transform .2s ease-in-out;
+
+                &:hover {
+                    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+                    transform: scale(1.05);
+                }
+            }
+
+            &__show-popup {
+                width: 35px;
+                height: 35px;
+
+                cursor: pointer;
+                transition: transform .1s ease-in-out;
+
+                &:hover {
+                    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .navbar-serachblock {
+            width: 33.333%;
+
+            input {
+                position: relative;
+                width: 55%;
+                height: 35px;
+                padding: 0px 10px;
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 8px;
+                background-color: white;
+                color: black;
+                z-index: 1;
+                transition: all .3s ease-in-out;
+
+
+                &:focus {
+                    width: 80%;
+                }
+            }
+        }
+
+        .navbar-progress-bar {
+            width: 33.333%;
+            height: 80px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .circular-progress-bar {
+                
+                margin-right: 10px;
+                
+            }
+        }
+    }
+
+    .popup {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.411);
+
+        &__content {
+
+            width: 300px;
+            height: 200px;
+            background-color: rgb(221, 218, 218);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 1px 0px 28px 4px rgba(0, 0, 0, 0.75);
+
+        }
+
+        &__header {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            margin: 0 auto;
+            background: rgb(165, 161, 161);
+            border-radius: 10px 10px 0px 0px;
+
+        }
+
+
+        &__title {
+            width: 100%;
+            align-self: center;
+
+            h1 {
+                color: rgb(255, 255, 255);
+                text-align: center;
+            }
+        }
+
+        &__close-btn {
+            width: 15px;
+            height: 15px;
+            margin-right: auto;
+            margin-top: 5px;
+            margin-right: 5px;
+
+
+
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+
+
+        }
+
+        &__create-dir-btn {
+            width: 100px;
+            height: 38px;
+            border: 3px solid rgb(35, 121, 235);
+            background: rgb(15, 144, 219);
+
+            margin: 0 auto;
+            margin-bottom: 5px;
+            line-height: 16px;
+            font-size: 12px;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            transition: box-shadow .2s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 5px 0px #0a0a0a;
+            }
+        }
+
+        input {
+            width: 130px;
+            padding: 0 10px;
+            transition: width 0.3s ease-in-out;
+            text-align: center;
+
+            &:hover {
+                width: 180px;
+            }
+        }
+    }
+
+}
+
+.drag-block {
+    width: 70%;
+    height: calc(100vh - 18vh);
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    margin-top: 60px;
+    border: 3px dashed rgb(35, 121, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+

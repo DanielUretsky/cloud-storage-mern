@@ -1,0 +1,7 @@
+{
+    "serverPort": 5000,
+    "databaseUrl": "mongodb+srv://Admin:234567@cloud-disk.dupfs3q.mongodb.net/?retryWrites=true&w=majority",
+    "SecretKey": "cloudy-secret-key",
+    "filePath": "D:\\Daniel\\WEB-DEV\\CLOUD-DISK\\server\\files",
+    "staticPath": "D:\\Daniel\\WEB-DEV\\CLOUD-DISK\\server\\static"
+}
